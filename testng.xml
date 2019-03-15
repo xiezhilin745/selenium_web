@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="自动化测试">
+    <!-- 登录模块 -->
+	<test name="登录">
+		<classes>
+			<class name="com.xiezl.login.LoginPage">
+				<!-- 调整类里面方法的执行顺序 -->
+				<methods>
+					<include name="inittest"></include>
+					<exclude name="initcase"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- 客户模块 -->
+	<test name="客户">
+		<classes>
+			<class name="com.xiezl.customers.CustomersPage"></class>
+		</classes>
+	</test>
+
+	<!-- 加载浏览器驱动 -->
+	<parameter name="browserType" value="chrome"></parameter>
+	<parameter name="driverPath" value="src/test/resources/driver/chromedriver.exe"></parameter>
+	<parameter name="seleniumVersion" value="3.X"></parameter>
+	<!-- 截图/报表监听器 -->
+	<listeners>
+		<listener class-name="com.xiezl.listener.TestListener"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	</listeners>
+</suite>

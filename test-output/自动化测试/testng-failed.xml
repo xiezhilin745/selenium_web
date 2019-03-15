@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [自动化测试]">
+  <parameter name="driverPath" value="src/test/resources/driver/chromedriver.exe"/>
+  <parameter name="seleniumVersion" value="3.X"/>
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="登录(failed)">
+    <classes>
+      <class name="com.xiezl.customers.CustomersPage">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.xiezl.customers.CustomersPage -->
+      <class name="com.xiezl.login.LoginPage">
+        <methods>
+          <include name="inittest"/>
+        </methods>
+      </class> <!-- com.xiezl.login.LoginPage -->
+    </classes>
+  </test> <!-- 登录(failed) -->
+</suite> <!-- Failed suite [自动化测试] -->

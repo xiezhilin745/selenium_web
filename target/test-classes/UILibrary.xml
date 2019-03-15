@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+    <page class="com.xiezl.login.LoginPage" desc="登录页面">
+        <!-- locator是元素的定位信息 -->
+        <locator by="linkText" value="独立版登录" desc="跳转登录页面"></locator>
+        <locator by="id" value="account" desc="用户账号"></locator>
+        <locator by="id" value="password" desc="用户密码"></locator>
+        <locator by="xpath" value="//*[@id='container']/div/div/div/form/div[2]/div[3]/div/div/span/button" desc="登录按钮"></locator>
+    	<locator by="xpath" value="/html/body/div[2]/div/div/div/form/div[2]/div[2]/div/div/div" desc="错误提示"></locator>
+     	<locator by="id" value="dashboard" desc="工作台"></locator>
+    		
+    </page>
+    
+    <page class="com.xiezl.customers.CustomersPage" desc="客户页面">
+        <!-- locator是元素的定位信息 -->
+        <locator by="xpath" value="//*[@id='sidebar']/nav/ul/li[7]/a/span" desc="基础资料按钮"></locator>
+    	<locator by="xpath" value="//*[@id='sidebar']/nav/ul/li[7]/div/div/div[2]/a[2]" desc="客户按钮"></locator>    	
+    	<locator by="xpath" value="//*[@id='main']/div[1]/div/div[1]/div[2]/a[2]" desc="新增客户按钮"></locator>
+    </page>
+    
+</pages>
