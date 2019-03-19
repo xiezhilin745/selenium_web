@@ -1,6 +1,0 @@
-#surefire
-#Fri Mar 15 15:15:05 CST 2019
-org.uncommons.reportng.escape-output=false
-user.dir=E\:\\java_workspace\\selenium_web
-localRepository=C\:\\Users\\Administrator\\.m2\\repository
-basedir=E\:\\java_workspace\\selenium_web

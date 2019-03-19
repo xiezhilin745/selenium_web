@@ -16,6 +16,20 @@
         <locator by="xpath" value="//*[@id='sidebar']/nav/ul/li[7]/a/span" desc="基础资料按钮"></locator>
     	<locator by="xpath" value="//*[@id='sidebar']/nav/ul/li[7]/div/div/div[2]/a[2]" desc="客户按钮"></locator>    	
     	<locator by="xpath" value="//*[@id='main']/div[1]/div/div[1]/div[2]/a[2]" desc="新增客户按钮"></locator>
+     	<locator by="xpath" value="//*[@id='main']/div[1]/div/div[8]/div/div/div[2]/form/div[1]/div/input" desc="客户名称输入框"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='客户编号'])[3]/following::input[1]" desc="客户编号输入框"></locator>
+    	<locator by="xpath" value="//*[@id='main']/div[1]/div/div[8]/div/div/div[2]/form/div[3]/div/select" desc="客户类型按钮"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='客户类型'])[2]/following::select[1]" desc="客户类型选择框"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='调价比例(%)'])[2]/following::input[1]" desc="调价比例输入框"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='期初应收款金额'])[1]/following::input[1]" desc="期初应收款金额输入框"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='地址'])[2]/following::input[1]" desc="地址输入框"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='操作'])[1]/following::input[1]" desc="联系人名称输入框"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='操作'])[1]/following::input[2]" desc="联系人手机输入框"></locator>
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='操作'])[1]/following::input[3]" desc="联系人电话输入框"></locator>    		
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='操作'])[1]/following::input[4]" desc="联系人邮箱输入框"></locator>    		
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='操作'])[1]/following::input[5]" desc="联系人地址输入框"></locator>    		
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='操作'])[1]/following::input[7]" desc="联系人备注输入框"></locator>    		
+    	<locator by="xpath" value="(.//*[normalize-space(text()) and normalize-space(.)='操作'])[1]/following::button[1]" desc="保存客户按钮"></locator>
     </page>
     
 </pages>

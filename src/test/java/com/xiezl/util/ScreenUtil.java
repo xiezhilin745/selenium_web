@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.xiezl.Base;
 
 public class ScreenUtil {
-	public static void takeScreenShot(String dir) {
+	public static File takeScreenShot(String dir) {
 		Date date = new Date();
 		long  time = date.getTime();
 		if (Base.driver instanceof ChromeDriver) {
@@ -22,6 +22,9 @@ public class ScreenUtil {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			//返回一个截图文件路径
+			return to;
+			
 		}else if (Base.driver instanceof FirefoxDriver) {
 			FirefoxDriver firefoxDriver = (FirefoxDriver) Base.driver;
 			File from = firefoxDriver.getScreenshotAs(OutputType.FILE);
@@ -31,6 +34,9 @@ public class ScreenUtil {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			//返回一个截图文件路径
+			return to;
 		}
+		return null;
 	}
 }

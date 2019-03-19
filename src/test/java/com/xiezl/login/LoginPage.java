@@ -47,11 +47,7 @@ public class LoginPage extends Base{
 		//判断登录页面URL是否包含以下断言
 		Assertion.assertUrlPresent("https://e.ikjxc.com");
 		click(getElement("登录按钮"));
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		sleep(3000);
 		Assertion.assertUrlPresent("ikjxc.com/dashboard");
 	}
 

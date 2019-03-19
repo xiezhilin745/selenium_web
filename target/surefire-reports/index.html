@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-自动化测试">
-              <span class="suite-name border-passed">自动化测试</span>
+              <span class="suite-name border-failed">自动化测试</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-自动化测试" class="hide-methods failed suite-自动化测试"> (hide)</a> <!-- hide-methods failed suite-自动化测试 -->
+                      <a href="#" panel-name="suite-自动化测试" class="show-methods failed suite-自动化测试"> (show)</a> <!-- show-methods failed suite-自动化测试 -->
+                    </span>
+                    <div class="method-list-content failed suite-自动化测试">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-自动化测试" title="com.xiezl.customers.CustomersPage" hash-for-method="NewCustomers">NewCustomers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-自动化测试 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,11 +113,6 @@
                       <a href="#" panel-name="suite-自动化测试" class="show-methods passed suite-自动化测试"> (show)</a> <!-- show-methods passed suite-自动化测试 -->
                     </span>
                     <div class="method-list-content passed suite-自动化测试">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-自动化测试" title="com.xiezl.customers.CustomersPage" hash-for-method="NewCustomers">NewCustomers</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-自动化测试" title="com.xiezl.login.LoginPage" hash-for-method="inittest">inittest</a> <!-- method navigator-link -->
@@ -121,9 +130,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-自动化测试" class="panel 自动化测试">
-          <div class="suite-自动化测试-class-passed">
+          <div class="suite-自动化测试-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.xiezl.customers.CustomersPage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -132,10 +141,34 @@
                   <a name="NewCustomers">
                   </a> <!-- NewCustomers -->
                   <span class="method-name">NewCustomers</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not interactable
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.5.1&apos;, revision: &apos;9c21bb67ef&apos;, time: &apos;2017-08-17T15:26:08.955Z&apos;
+System info: host: &apos;XIEZHILIN&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:56190}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir6984_5723}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3fbbbcad5cd6411fc84287cf2b1b9e1e
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:99)
+	at com.xiezl.Base.sendKeys(Base.java:219)
+	at com.xiezl.customers.CustomersPage.NewCustomers(CustomersPage.java:17)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-自动化测试-class-passed -->
+          </div> <!-- suite-自动化测试-class-failed -->
           <div class="suite-自动化测试-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -168,7 +201,7 @@
     &lt;listener class-name=&quot;com.xiezl.listener.TestListener&quot;/&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;登录&quot;&gt;
+  &lt;test name=&quot;loginTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.xiezl.login.LoginPage&quot;&gt;
         &lt;methods&gt;
@@ -177,12 +210,12 @@
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.xiezl.login.LoginPage --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- 登录 --&gt;
-  &lt;test name=&quot;客户&quot;&gt;
+  &lt;/test&gt; &lt;!-- loginTest --&gt;
+  &lt;test name=&quot;customersTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.xiezl.customers.CustomersPage&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- 客户 --&gt;
+  &lt;/test&gt; &lt;!-- customersTest --&gt;
 &lt;/suite&gt; &lt;!-- 自动化测试 --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,10 +227,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">登录 (1 class)</span>
+                <span class="test-name">loginTest (1 class)</span>
               </li>
               <li>
-                <span class="test-name">客户 (1 class)</span>
+                <span class="test-name">customersTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -227,11 +260,11 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'inittest')
 data.setCell(0, 2, 'com.xiezl.login.LoginPage')
-data.setCell(0, 3, 5392);
+data.setCell(0, 3, 5741);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'NewCustomers')
 data.setCell(1, 2, 'com.xiezl.customers.CustomersPage')
-data.setCell(1, 3, 708);
+data.setCell(1, 3, 832);
 window.suiteTableData['自动化测试']= { tableData: data, tableDiv: 'times-div-自动化测试'}
 return data;
 }
@@ -247,6 +280,12 @@ return data;
             <span class="header-content">Reporter output for 自动化测试</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">NewCustomers</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><img src='http://localhost:8080//screendshot/customersTest/2019-03-19/1552987558050.jpg' hight='100' width='100'><a href='http://localhost:8080//screendshot/customersTest/2019-03-19/1552987558050.jpg' target='_blank'>点击查看大图</a></img></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-自动化测试" class="panel">
@@ -279,18 +318,20 @@ return data;
               <div class="chronological-class-name">com.xiezl.login.LoginPage</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">inittest</span>
-                <span class="method-start">2516 ms</span>
+                <span class="method-start">2608 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.xiezl.customers.CustomersPage</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">NewCustomers</span>
-                <span class="method-start">7926 ms</span>
+                <span class="method-start">8385 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8636 ms</span>
+                <span class="method-start">9600 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

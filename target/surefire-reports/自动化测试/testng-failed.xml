@@ -8,15 +8,15 @@
     <listener class-name="com.xiezl.listener.TestListener"/>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test name="登录(failed)">
+  <test name="customersTest(failed)">
     <classes>
-      <class name="com.xiezl.login.LoginPage">
+      <class name="com.xiezl.customers.CustomersPage">
         <methods>
+          <include name="NewCustomers"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="inittest"/>
         </methods>
-      </class> <!-- com.xiezl.login.LoginPage -->
+      </class> <!-- com.xiezl.customers.CustomersPage -->
     </classes>
-  </test> <!-- 登录(failed) -->
+  </test> <!-- customersTest(failed) -->
 </suite> <!-- Failed suite [自动化测试] -->

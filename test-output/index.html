@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-自动化测试">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,6 +99,11 @@
                       <a href="#" panel-name="suite-自动化测试" class="show-methods passed suite-自动化测试"> (show)</a> <!-- show-methods passed suite-自动化测试 -->
                     </span>
                     <div class="method-list-content passed suite-自动化测试">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-自动化测试" title="com.xiezl.customers.CustomersPage" hash-for-method="NewCustomers">NewCustomers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-自动化测试" title="com.xiezl.login.LoginPage" hash-for-method="inittest">inittest</a> <!-- method navigator-link -->
@@ -116,6 +121,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-自动化测试" class="panel 自动化测试">
+          <div class="suite-自动化测试-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.xiezl.customers.CustomersPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewCustomers">
+                  </a> <!-- NewCustomers -->
+                  <span class="method-name">NewCustomers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-自动化测试-class-passed -->
           <div class="suite-自动化测试-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -158,6 +178,11 @@
       &lt;/class&gt; &lt;!-- com.xiezl.login.LoginPage --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- 登录 --&gt;
+  &lt;test name=&quot;客户&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.xiezl.customers.CustomersPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- 客户 --&gt;
 &lt;/suite&gt; &lt;!-- 自动化测试 --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,6 +195,9 @@
             <ul>
               <li>
                 <span class="test-name">登录 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">客户 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,16 +223,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'inittest')
 data.setCell(0, 2, 'com.xiezl.login.LoginPage')
-data.setCell(0, 3, 4943);
+data.setCell(0, 3, 5507);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'NewCustomers')
+data.setCell(1, 2, 'com.xiezl.customers.CustomersPage')
+data.setCell(1, 3, 2842);
 window.suiteTableData['自动化测试']= { tableData: data, tableDiv: 'times-div-自动化测试'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-自动化测试">
               </div> <!-- times-div-自动化测试 -->
             </div> <!-- times-div -->
@@ -237,18 +269,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.xiezl.login.LoginPage</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.xiezl.customers.CustomersPage</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp(chrome, src/test/resources/driver/chromedriver.exe, 3.X)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.xiezl.login.LoginPage</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">inittest</span>
-                <span class="method-start">2547 ms</span>
+                <span class="method-start">2559 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.xiezl.customers.CustomersPage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">NewCustomers</span>
+                <span class="method-start">8094 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7515 ms</span>
+                <span class="method-start">10939 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
